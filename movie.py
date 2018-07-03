@@ -17,7 +17,7 @@ class Movie(Base):
     id = Column(Integer, primary_key=True)
     title = Column(String)
     release_date = Column(Date)
-    actors = relationship("Actor", seconday=movies_actors_association)
+    actors = relationship("Actor", secondary=movies_actors_association)
 
     def __init__(self, title, release_date):
         self.title = title
